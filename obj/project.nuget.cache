@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "W2m7+4y5xNHqQod6IoB5YuhAP2kIPrkO9klWrpwO82eH4gWybdl736IVfeVZUvQ2sHyVHP17nXn91dgtzvkKfg==",
+  "success": true,
+  "projectFilePath": "/Users/Matt/Develop/lab/aspnet-vite/aspnet-vite.csproj",
+  "expectedPackageFiles": [
+    "/Users/Matt/.cache/NuGetPackages/vite.aspnetcore/1.11.0/vite.aspnetcore.1.11.0.nupkg.sha512",
+    "/Users/Matt/.cache/NuGetPackages/vite.aspnetcore.abstractions/1.1.0/vite.aspnetcore.abstractions.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

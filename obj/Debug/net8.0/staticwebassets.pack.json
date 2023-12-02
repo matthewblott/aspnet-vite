@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/client/assets/index-FdoZH_wP.js",
+      "PackagePath": "staticwebassets/client/assets/index-FdoZH_wP.js"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/client/assets/index-X4m0RMh6.css",
+      "PackagePath": "staticwebassets/client/assets/index-X4m0RMh6.css"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/client/index.html",
+      "PackagePath": "staticwebassets/client/index.html"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/img/vite.svg",
+      "PackagePath": "staticwebassets/img/vite.svg"
+    },
+    {
+      "Id": "/Users/Matt/Develop/lab/aspnet-vite/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.aspnet-vite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.aspnet-vite.props",
+      "PackagePath": "build\\aspnet-vite.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.aspnet-vite.props",
+      "PackagePath": "buildMultiTargeting\\aspnet-vite.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.aspnet-vite.props",
+      "PackagePath": "buildTransitive\\aspnet-vite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

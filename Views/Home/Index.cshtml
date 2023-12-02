@@ -1,0 +1,21 @@
+@section Styles {
+  <link rel="stylesheet" asp-href-include="~/Client/src/index-*.css" >
+}
+
+<environment include="Development">
+  @section Scripts {
+    @* <script type="module" src="http://localhost:5173/src/main.js"></script> *@
+    <script asp-src-include="~/Client/src/main.js"></script>
+  }
+</environment>
+
+<environment include="Production">
+  @section Scripts {
+    <script asp-src-include="~/Client/src/main-*.js"></script>
+  }
+</environment>
+
+<h1>Home</h1>
+
+<div id="app"></div>
+
