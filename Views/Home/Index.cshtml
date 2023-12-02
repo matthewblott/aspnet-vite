@@ -1,21 +1,22 @@
-@section Styles {
-  <link rel="stylesheet" asp-href-include="~/Client/src/index-*.css" >
+﻿@{
+  ViewData["Title"] = "Home Page";
 }
 
-<environment include="Development">
-  @section Scripts {
-    @* <script type="module" src="http://localhost:5173/src/main.js"></script> *@
-    <script asp-src-include="~/Client/src/main.js"></script>
-  }
-</environment>
+@section Styles {
+  <link rel="stylesheet" vite-href="~/style.css" asp-append-version="true" />
+}
+@section Scripts {
+  <script type="module" vite-src="~/main.js" asp-append-version="true"></script>
+}
 
-<environment include="Production">
-  @section Scripts {
-    <script asp-src-include="~/Client/src/main-*.js"></script>
-  }
-</environment>
-
-<h1>Home</h1>
-
-<div id="app"></div>
-
+<div>
+  <img src="~/vite.svg" class="logo" alt="Vite logo" />
+  <img src="~/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
+  <h1>Hello Vite!!</h1>
+  <div class="card">
+    <button id="counter" type="button"></button>
+  </div>
+  <p class="read-the-docs">
+    Click on the Vite logo to learn more
+  </p>
+</div>

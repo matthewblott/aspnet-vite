@@ -1,13 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace aspnet_vite.Controllers;
+namespace ViteNET.MVC.Controllers;
 
 public class HomeController : Controller
 {
-
-    public IActionResult Index()
-    {
-        return View();
-    }
+	public IActionResult Index()
+	{
+		return View();
+	}
 
 }

@@ -1,32 +1,32 @@
-// using Vite.AspNetCore.Extensions;
+using Vite.AspNetCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
-// builder.Services.AddViteServices();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddViteServices(options =>
+{
+	options.Server.AutoRun = true;
+	options.Server.UseFullDevUrl = true;
+});
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-  // app.UseViteDevMiddleware();
-}
-
 if (!app.Environment.IsDevelopment())
 {
-  app.UseExceptionHandler("/Home/Error");
-  app.UseHsts();
+	app.UseExceptionHandler("/Home/Error");
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-  name: "default",
-  pattern: "{controller=Home}/{action=Index}/{id?}");
+	name: "default",
+	pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapFallbackToController("Index", "Home");
+if (app.Environment.IsDevelopment())
+{
+	app.UseViteDevMiddleware();
+}
 
 app.Run();
