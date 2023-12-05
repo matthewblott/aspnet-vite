@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ViteNET.MVC.Controllers;
+namespace aspnet_vite.MVC.Controllers;
 
 public class HomeController : Controller
 {
