@@ -2,8 +2,6 @@
   "profiles": {
     "ViteNET.MVC": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
       "applicationUrl": "http://localhost:7281;http://localhost:5217",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
