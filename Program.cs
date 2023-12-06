@@ -1,32 +1,25 @@
-using Vite.AspNetCore.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-builder.Services.AddViteServices(options =>
-{
-	options.Server.AutoRun = true;
-	options.Server.UseFullDevUrl = true;
-});
+builder.Services
+  .AddControllersWithViews()
+  .AddRazorRuntimeCompilation();
 
 var app = builder.Build();
-
-if (!app.Environment.IsDevelopment())
-{
-	app.UseExceptionHandler("/Home/Error");
-}
 
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+  endpoints.MapControllers();
+  endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+});
 
 if (app.Environment.IsDevelopment())
 {
-	app.UseViteDevMiddleware();
+  app.UseSpa(spa =>
+    spa.UseProxyToSpaDevelopmentServer("http://localhost:5173/"));
 }
 
 app.Run();

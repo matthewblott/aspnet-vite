@@ -3,20 +3,29 @@
 }
 
 @section Styles {
-  <link rel="stylesheet" vite-href="~/style.css" asp-append-version="true" />
+  @* <link rel="stylesheet" vite-href="~/style.css" asp-append-version="true" /> *@
+  <environment names="Staging,Production">
+    @* <link rel="stylesheet" asp-href-include="~/dist/assets/main-*.css" /> *@
+  </environment>
 }
 @section Scripts {
-  <script type="module" vite-src="~/main.js" asp-append-version="true"></script>
+  @* <script type="module" vite-src="~/main.js" asp-append-version="true"></script> *@
+  
+  <environment names="Development">
+    <script type="module" src="~/dist/@@vite/client"></script>
+    <script type="module" src="~/dist/js/main.js"></script>
+  </environment>
+  <environment names="Staging,Production">
+    @* <script type="module" asp-src-include="~/dist/assets/main-*.js"></script> *@
+  </environment>
+  
 }
 
 <div>
-  <img src="~/vite.svg" class="logo" alt="Vite logo" />
-  <img src="~/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-  <h1>Hello Vite!!</h1>
+  <img src="~/img/vite.svg" class="logo" alt="Vite logo" />
+  <img src="~/img/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
+  <h1>Hello Vite</h1>
   <div class="card">
     <button id="counter" type="button"></button>
   </div>
-  <p class="read-the-docs">
-    Click on the Vite logo to learn more
-  </p>
 </div>
